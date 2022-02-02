@@ -308,6 +308,7 @@ async function createBrowserBuild(
     platform: "browser",
     format: "esm",
     external: externals,
+    jsxFactory: "jsx",
     inject: [reactShim],
     loader: loaders,
     bundle: true,
@@ -351,6 +352,7 @@ async function createServerBuild(
         ? ["module", "main"]
         : ["main", "module"],
     target: options.target,
+    jsxFactory: "jsx",
     inject: [reactShim],
     loader: loaders,
     bundle: true,
